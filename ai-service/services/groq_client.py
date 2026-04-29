@@ -15,8 +15,12 @@ HEADERS = {
 }
 
 def load_prompt(user_input):
-    with open("prompts/analyze_prompt.txt", "r") as f:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    prompt_path = os.path.join(base_dir, "..", "prompts", "analyze_prompt.txt")
+
+    with open(prompt_path, "r") as f:
         template = f.read()
+
     return template.replace("{user_input}", user_input)
 
 
