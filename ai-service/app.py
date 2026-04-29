@@ -32,6 +32,21 @@ def health():
         "service": "ai-service"
     })
 
+@app.route("/", methods=["GET"])
+def home():
+    return "AI Service is running"
+
+@app.after_request
+def add_security_headers(response):
+    response.headers["Content-Security-Policy"] = "default-src 'self'"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    
+    if "Server" in response.headers:
+        response.headers["Server"] = "SecureServer"
+    
+    return response
+
 # Run server
 if __name__ == "__main__":
     app.run(debug=True)
