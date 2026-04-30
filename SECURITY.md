@@ -108,3 +108,17 @@ Passed
 - API is stable and safe
 
 Overall, the AI service is secure for current use.
+
+## Week 2 Security Sign-off
+
+- Rate limiting verified (30 requests/min)
+- Input sanitization and prompt injection protection verified
+- Security headers implemented (CSP, X-Frame-Options, X-Content-Type-Options)
+- No High severity vulnerabilities found in OWASP ZAP scan
+- No personal or sensitive data used in prompts (PII safe)
+
+Note:
+JWT authentication is handled by backend (Spring Boot layer)
+
+Conclusion:
+AI service is secure and ready for integration.
