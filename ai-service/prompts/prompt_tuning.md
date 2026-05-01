@@ -15,3 +15,17 @@ Improvements Made:
 
 Conclusion:
 Prompt is performing well. No further changes required.
+
+# Week 2 Day 10 — AI Quality Review
+
+Tested 10 new inputs on /analyze endpoint.
+
+Average Score: 9.5/10
+
+Observations:
+- Responses are consistent and well-structured
+- Clear Risk, Impact, Recommendation format
+- Relevant cybersecurity insights
+
+Conclusion:
+Prompt quality is good. No further changes required.
