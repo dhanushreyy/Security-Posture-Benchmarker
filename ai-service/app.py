@@ -1,6 +1,7 @@
+from flask import Flask
+from flask_cors import CORS
 from flask import Flask, jsonify
 from routes.analyze_routes import analyze_bp
-
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
@@ -8,6 +9,7 @@ import logging
 
 # create app
 app = Flask(__name__)
+CORS(app)
 
 # logging setup
 logging.basicConfig(

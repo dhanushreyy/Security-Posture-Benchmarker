@@ -3,3 +3,4 @@ requests
 python-dotenv
 flask-limiter
 bleach
+flask-cors
